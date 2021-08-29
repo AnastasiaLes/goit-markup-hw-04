@@ -317,7 +317,6 @@ img {
 }
 
 .team-list-title {
-  /* margin-top: 30px; */
   margin-bottom: 10px;
   color: var(--title-text-color);
 
@@ -335,26 +334,26 @@ img {
 
 .social-icon {
   fill: #afb1b8;
-  align-items: center;
 }
 .social-link {
+  display: flex;
   align-items: center;
-  display: block;
-  padding-top: 12px;
-  width: 44px;
-  height: 44px;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  outline: var(--title-text-color);
-  /* justify-content: center; */
 }
 
 .social-item {
   border-radius: 50%;
+  width: 44px;
+  height: 44px;
 }
-.social-icon:hover,
-.social-icon:focus,
 .social-item:hover,
-.social-item:focus {
+.social-item:focus,
+.social-item:hover .social-icon,
+.social-item:focus .social-icon {
   fill: #ffffff;
   background-color: var(--accent-color);
 }
@@ -371,25 +370,33 @@ img {
 
 .clients-list {
   display: flex;
+  justify-content: center;
 }
+
 .icon-logo {
   fill: #afb1b8;
   background-position: center;
 }
 
 .client-item {
-  display: block;
   width: 170px;
   height: 92px;
-  padding: 16px 32px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
 }
 
-.icon-logo:hover,
-.icon-logo:focus,
-.client-item:hover,
-.client-item:focus {
+.client-link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-link:hover,
+.client-link:focus,
+.client-link:hover .icon-logo,
+.client-link:focus.icon-logo {
   fill: var(--accent-color);
   border-color: var(--accent-color);
 }
